@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="clouds-and-sun.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="nav-logo" src="clouds-and-sun.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link item-nav" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link item-nav" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link item-nav" href="#guide">How to Use?</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-info"><a class="nav-link" href="#test">Details</a></button>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div id="home" class="main-body">
+            <div class="text-center">
+                <h1><span style="color: aqua;">Weather</span> Application</h1>
+                <p>Welcome to the Weather App! Get real-time weather updates for any city in the world.</p>
+            </div>
+        </div>
+        <div class="main-about">
+            <div id="about" class="abt-head text-center">
+                <h1>ABOUT</h1>
+            </div>
+            <div class="about-box container" id="abt-bx1">
+                <div class="row">
+                    <div class="box1 col-8">
+                        <p>Welcome to the Customized Weather Advisory System! Our platform goes beyond basic weather
+                            forecasts by providing personalized insights tailored to your unique lifestyle and needs.
+                            Whether you're a gardener, runner, or someone with specific health concerns like allergies,
+                            our system offers you the most relevant and timely weather advice. Our goal is to enhance
+                            your daily life by helping you make informed decisions based on accurate weather
+                            predictions.</p>
+                    </div>
+                    <div class="box2 col-4">
+                        <img class="bx1-img" src="sun.png" alt="wpic">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-about">
+            <div id="guide" class="abt-head text-center">
+                <h1><span style="color: aqua;">HOW TO</span> USE?</h1>
+            </div>
+            <div class="about-box container" id="abt-bx1">
+                <div class="row">
+                    <div class="box3 col-4">
+                        <img class="bx1-img" src="raining.png" alt="wpic">
+                    </div>
+                    <div class="box4 col-8">
+                        <p>To use the Customized Weather Advisory System, simply enter the name of any city in the
+                            search bar provided below. After typing in the city name, click the "Search" button. Our
+                            system will then use the integrated API to fetch real-time weather data for the specified
+                            location. Please ensure that your internet connection is active, as this is necessary for
+                            retrieving the latest weather information. Once the data is collected, the system will
+                            display the current weather conditions and any relevant alerts or advisories, tailored to
+                            your preferences and profile settings. This intuitive process allows you to quickly access
+                            personalized weather updates with ease.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="test" class="container py-3 weather-body">
+            <h1 class="text-center"><span style="color: aqua;">Weather</span> Details</h1>
+            <br>
+            <br>
+            <br>
+            <form class="d-flex justify-content-center" role="search">
+                <input id="city" class="form-control me-2 w-auto" type="search" placeholder="Enter City" aria-label="Search" style="width: 200px;">
+                <button class="btn btn-outline-info" type="submit" id="submit">Search</button>
+            </form>
+            <br>
+            <br>
+            <br>
+            <h1 class="my-4 text-center">Report for <span id="cityName" style="color: aqua;"></span></h1>
+            <main>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm border-info">
+                            <div class="card-header py-3 text-bg-info border-info">
+                                <h4 class="my-0 fw-normal">Temperatures</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><span id="temp"></span><small
+                                        class="text-body-secondary fw-light"><span> &#8451;</span></small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Weather Possibility is <span id="weather"></span></li>
+                                    <li>Minimum Temperature is <span id="min_temp"></span></li>
+                                    <li>Maximum Temperature is <span id="max_temp"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm border-info">
+                            <div class="card-header py-3 text-bg-info border-info">
+                                <h4 class="my-0 fw-normal">Wind</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><span id="wind_speed"></span><small
+                                        class="text-body-secondary fw-light"> kmph</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Wind Degrees is <span id="wind_deg"></span></li>
+                                    <li>Feels Like <span id="feels_like"></span></li>
+                                    <li>Country is <span id="country"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm border-info">
+                            <div class="card-header py-3 text-bg-info border-info">
+                                <h4 class="my-0 fw-normal">Humidity</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title"><span id="humidity"></span><small
+                                        class="text-body-secondary fw-light"> %</small></h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Sunrise: <span id="sunrise"></span></li>
+                                    <li>Sunset: <span id="sunset"></span></li>
+                                    <li>Timezone is <span id="timezone"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <h2 class="display-6 text-center mb-4">Weather of Common Places</h2>
+                <br>
+                <br>
+                <div class="table-responsive text-center">
+                    <table class="table">
+                        <thead style>
+                            <tr>
+                                <th style="width: 10%;"></th>
+                                <th style="width: 10%;">Temp</th>
+                                <th style="width: 10%;">Temp_min</th>
+                                <th style="width: 10%;">Temp_max</th>
+                                <th style="width: 10%;">Humidity</th>
+                                <th style="width: 10%;">Wind Speed</th>
+                                <th style="width: 10%;">Wind Direction</th>
+                                <th style="width: 10%;">Country</th>
+                                <th style="width: 10%;">Sunrise</th>
+                                <th style="width: 10%;">Sunset</th>
+                                <th style="width: 10%;">Timezone</th>
+                            </tr>
+                        </thead>
+                        <tbody id="weatherTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+</html>

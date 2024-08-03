@@ -1,0 +1,60 @@
+.nav-logo{
+    height: 50px;
+}
+.item-nav{
+    color: white;
+}
+.item-nav:hover{
+    color: aqua;
+}
+.main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    text-align: center;
+    flex-direction: column;
+}
+.main-about{
+    height: 80vh;
+    width: 100%;
+}
+.abt-head{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-box{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1{
+    text-align: right;
+    align-content: center;
+    font-size: 21px;
+}
+.box2{
+    text-align: left;
+    align-content: center;
+    
+}
+.bx1-img{
+    height: 250px;
+}
+.box3{
+    text-align: right;
+    align-content: center;
+}
+.box4{
+    text-align: left;
+    align-content: center;
+    font-size: 21px;   
+}
+.weather-body{
+    height: 100vh;
+}
