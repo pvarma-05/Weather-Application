@@ -1,4 +1,4 @@
-const apiKey = 'b05fa7c752mshd986627b3dce32cp10f1d5jsnc6f18abad081';
+const apiKey = '1b3078d4b9msh717c28a9674364ap128691jsncc669b923bc0';
 const apiHost = 'weather-api138.p.rapidapi.com';
 
 const updateWeatherDetails = (data) => {
@@ -62,9 +62,7 @@ const updateWeatherTable = (data, city) => {
 const getWeatherForCommonPlaces = () => {
     const commonPlaces = [
         'Visakhapatnam',
-        'Lucknow',
         'Kolkata',
-        'Shanghai',
         'Boston'
     ];
 
